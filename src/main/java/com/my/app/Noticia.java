@@ -1,16 +1,16 @@
-public class Equipo {
+public class Noticia {
 
     private String idNoticia;
     private String tituloN;
     private String infoN;
 
-    public Equipo(String idNoticia, String tituloN, String infoN) {
+    public Noticia(String idNoticia, String tituloN, String infoN) {
         this.setID(idNoticia);
         this.setTituloN(tituloN);
         this.setInfoN(infoN);
     }
 
-    public Equipo() { }
+    public Noticia() { }
 
     public String getID() {
         return this.idNoticia;

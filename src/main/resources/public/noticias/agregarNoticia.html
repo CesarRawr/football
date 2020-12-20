@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
 	<title>Agregar Noticia</title>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="../images/favicon.png" />
     <link href="../css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../css/styles-noticias.css"> 
-    
-    
 	<style >
 		*{
 			margin: 0;
@@ -55,28 +52,17 @@
 			cursor: pointer;
 			width: 40%;
 		}
-
 	</style>
+<body> 
+	<form  method="POST" name='agregarNoticia'>
+		<center><h1>Agregar Noticia</h1></center>
+		<input type="text" name="tituloN" id="tituloN" placeholder="Escribe el titulo de la noticia" required>
 	
-<body>
-	
-    
-
-		<form  method="POST" name='agregarNoticia'>
-				<center><h1>Agregar Noticia</h1></center>
-				<input type="text" name="tituloN" id="tituloN" placeholder="Escribe el titulo de la noticia" required>
-			
-				<input type="text" name="infoN" id="infoN" placeholder="Escribe la informacion de la noticia" required>
-			
+		<input type="text" name="infoN" id="infoN" placeholder="Escribe la informacion de la noticia" required>
 				
-			
-				
-			<input type="submit" value="Agregar" name="sub"/>
-			<input type="button" value="volver atrás" name="volver atrás2" onclick="location.href='/oficio/equipos/consultar.php'" />
-                            
-                   
-			
-		</form>		
-
+		<input class="agregar" type="submit" value="Agregar" name="sub"/>
+		<input class="volver" type="button" value="volver atrás" name="volver atrás2" />
+	</form>
+	<script src="/noticias/agregarNoticia.js"></script>
 </body>
 </html>

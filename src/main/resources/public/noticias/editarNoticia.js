@@ -6,12 +6,9 @@ actualizar.addEventListener('click', (e) => {
 	  e.preventDefault();
 
     let info = new FormData();
-    info.append("id", document.getElementById("idJugador").value);
-    info.append("nombre", document.getElementById("nmJugador").value);
-    info.append("fecha", document.getElementById("fechaNacim").value);
-    info.append("numero", document.getElementById("numeroJug").value);
-    info.append("equipo", document.getElementById("Equipo").value);    
-    info.append("torneo", document.getElementById("Torneo").value);
+    info.append("idNoticia", document.getElementById("idNoticia").value);
+    info.append("tituloN", document.getElementById("tituloN").value);
+    info.append("infoN", document.getElementById("infoN").value);
 
     let object = {};
 
@@ -21,17 +18,17 @@ actualizar.addEventListener('click', (e) => {
 
     let json = JSON.stringify(object);
 
-  	fetch('/jugador', {
+  	fetch('/noticia', {
   		method: 'PUT',
       body: json
   	})
   	.then((response) => {
   		if(response.ok) {
-  			window.location = "/jugadores/jugadores.html";
+  			window.location = "/noticias/noticias.html";
   		}
   	});
 });
 
 volver.addEventListener('click', (e) => {
-	window.location = "/jugadores/jugadores.html";
+	window.location = "/noticias/noticias.html";
 });

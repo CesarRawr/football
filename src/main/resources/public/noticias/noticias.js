@@ -1,4 +1,4 @@
-fetch("/jugador")
+fetch("/noticia")
 .then((res) => {
 	return res.json();
 })
@@ -14,12 +14,9 @@ fetch("/jugador")
 function fila(info) {
 	return `
 		<tr>
-            <td class="id">${ info.id }</td>
-            <td class="nombre">${ info.nombre }</td>
-            <td class="fecha">${ info.fecha }</td>
-            <td class="numero">${ info.numero }</td>
-            <td class="equipo">${ info.equipo }</td>
-            <td class="torneo">${ info.torneo }</td>
+            <td class="id">${ info.idNoticia }</td>
+            <td class="nombre">${ info.tituloN }</td>
+            <td class="fecha">${ info.infoN }</td>
         </tr>
 	`;	
 }

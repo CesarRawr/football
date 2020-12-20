@@ -81,6 +81,32 @@ public class App {
 
             return DAOJUGADORES.actualizarJugador(jugador);
         });
+
+        //                    Noticias
+        //--------------------------------------------------------------
+        
+        get("/noticia", (req, res) -> {
+            return gson.toJson(DAONOTICIAS.getNoticias());
+        });
+
+        post("/noticia", (req, res) -> {
+
+            String data = req.body();
+            Noticia noticia = gson.fromJson(data, Noticia.class);
+
+            return DAONOTICIAS.crearNoticia(noticia);
+        });
+        
+        delete("/noticia/:id", (req, res) -> {
+            return DAONOTICIAS.eliminarNoticia(req.params("id"));
+        });
+
+        put("/noticia", (req, res) -> {
+            String data = req.body();
+            Noticia noticia = gson.fromJson(data, Noticia.class);
+
+            return DAONOTICIAS.actualizarNoticia(noticia);
+        });
     }
 
     static int getHerokuAssignedPort() {

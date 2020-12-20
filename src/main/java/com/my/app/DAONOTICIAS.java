@@ -1,11 +1,11 @@
 import java.sql.*;
 import java.util.*;
 
-public class DAOJUGADORES {
+public class DAONOTICIAS {
     
     private static Conexion conexion = new Conexion();
 
-    public static String crearJugador(Jugador jugador) {
+    public static String crearNoticia(Noticia noticia) {
 
         PreparedStatement st = null;
         Connection con = null;
@@ -13,14 +13,11 @@ public class DAOJUGADORES {
         con = conexion.getConnection();
 
         try {
-            String sql = "insert into jugadores values (null,?,?,?,?,?)";
+            String sql = "insert into noticias values (null,?,?)";
             
             st = con.prepareStatement(sql);
-            st.setString(1, jugador.getNombre());
-            st.setString(2, jugador.getFecha());
-            st.setString(3, jugador.getNumero());
-            st.setString(4, jugador.getEquipo());
-            st.setString(5, jugador.getTorneo());
+            st.setString(1, noticia.getTituloN());
+            st.setString(2, noticia.getInfoN());
 
             if(st.executeUpdate() > 0){
                 msj = "El usuario fue agregado";
@@ -53,30 +50,26 @@ public class DAOJUGADORES {
         return msj;
     }
 
-    public static List<Jugador> getJugadores() {
+    public static List<Noticia> getNoticias() {
         
         Statement st = null;
         Connection con = null;
         ResultSet rs = null;
-        List<Jugador> resultados = new ArrayList<Jugador>();
+        List<Noticia> resultados = new ArrayList<Noticia>();
 
         con = conexion.getConnection();
 
         try {
-            String sql = "select * from jugadores";
+            String sql = "select * from noticias";
             st = con.createStatement();
             rs = st.executeQuery(sql);
             while(rs.next()){
                 
-                Jugador c = new Jugador();
+                Noticia c = new Noticia();
 
-                c.setID(rs.getString("idJugador"));
-                c.setNombre(rs.getString("nmJugador"));
-                c.setFecha(rs.getString("fechaNacim"));
-                c.setNumero(rs.getString("numeroJug"));
-                c.setEquipo(rs.getString("Equipo"));
-                c.setTorneo(rs.getString("Torneo"));
-
+                c.setID(rs.getString("idNoticia"));
+                c.setTituloN(rs.getString("tituloN"));
+                c.setInfoN(rs.getString("infoN"));
                 resultados.add(c);
             }  
         }
@@ -116,7 +109,7 @@ public class DAOJUGADORES {
         return resultados;
     }
 
-    public static String eliminarJugador(String id) {
+    public static String eliminarNoticia(String id) {
         
         PreparedStatement st = null;
         Connection con = null;
@@ -126,7 +119,7 @@ public class DAOJUGADORES {
 
         try{
 
-            String sql = "delete from jugadores where idJugador = ?";
+            String sql = "delete from noticias where idNoticia = ?";
             st = con.prepareStatement(sql);
             st.setString(1, id);
 
@@ -162,7 +155,7 @@ public class DAOJUGADORES {
         return msj;
     }
 
-    public static String actualizarJugador(Jugador jugador) {
+    public static String actualizarNoticia(Noticia noticia) {
 
         PreparedStatement st = null;
         Connection con = null;
@@ -170,21 +163,18 @@ public class DAOJUGADORES {
         con = conexion.getConnection();
 
         try {
-            String sql = "update jugadores set nmJugador=?, fechaNacim=?, numeroJug=?, Equipo=?, torneo=? where idJugador=?";
+            String sql = "update noticias set tituloN=?, infoN=? where idNoticia=?";
             
             st = con.prepareStatement(sql);
-            st.setString(1, jugador.getNombre());
-            st.setString(2, jugador.getFecha());
-            st.setString(3, jugador.getNumero());
-            st.setString(4, jugador.getEquipo());
-            st.setString(5, jugador.getTorneo());
-            st.setString(6, jugador.getID());
+            st.setString(1, noticia.getTituloN());
+            st.setString(2, noticia.getInfoN());
+            st.setString(3, noticia.getID());
 
             if(st.executeUpdate() > 0){
-                msj = "La jugador fue actualizada";
+                msj = "La noticia fue actualizada";
             }
             else{
-                msj = "No se pudo actualizar la jugador";
+                msj = "No se pudo actualizar la noticia";
             }
         }
         catch(Exception e) {
