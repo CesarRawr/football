@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Editar Partido</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+        <!-- Favicon-->
+        <link rel="icon" type="image/png" href="../images/favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/styles-partidos.css"> 
+    </head>
+
+<body>
+  <div align="center">    
+      <form method="POST" >
+          <center><h1>Selecciona el partido a editar</h1></center>
+        <p>Partidos:
+          <select id="idPartido" name= "idPartido">
+            <option value="0">Seleccione:</option>
+          </select>
+            <br><label for="tEnTorneo">Equipo local</label>
+            <select type ="text" id="equipoL" name="equipoL">
+                <option value="Conejos">Conejos</option> 
+                <option value="Borregas">Borregas</option>
+                <option value="Aguilas">Aguilas</option> 
+                <option value="Pequeñines">Pequeñines</option> 
+                <option value="Montejei">Montejei</option> 
+              
+            </select>
+                    <br>
+            <label for="tEnTorneo">Equipo visitante</label>
+            <select type ="text" id="equipoV" name="equipoV">
+                <option value="Conejos">Conejos</option> 
+                <option value="Borregas">Borregas</option>
+                <option value="Aguilas">Aguilas</option> 
+                <option value="Pequeñines">Pequeñines</option> 
+                <option value="Montejei">Montejei</option> 
+              
+            </select>
+                    <br>
+            
+            
+            <label for="tEnTorneo">Fecha del partido</label>
+            <input type ="date" id="fechaP" name="fechaP">
+            <br>
+            <label for="tEnTorneo">Hora del partido</label>
+            <input type ="time" id="horaP" name="horaP">
+            <br>
+          <input type="submit" name="sub" value="Actualizar"/>
+            <input type="button" value="volver atrás" name="volver atrás2" onclick="location.href='/oficio/partidos/mostrar.php'" />
+        </p>
+    </form>
+  </div>
+    
+</body>
+
+</html>

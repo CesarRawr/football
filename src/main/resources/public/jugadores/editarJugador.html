@@ -1,0 +1,44 @@
+<html lang="es">
+<head>
+	<title>Actualizar Jugador</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../css/styles-edjugadores.css"> 
+</head>
+<body>
+
+	<center><h1>Actualizar jugador</h1></center>
+	<div>
+		<form method="POST" name='actualizarJugador' >
+			<div>
+				<label>Id del jugador</label>
+				<input type="text" name="idJugador" id="idJugador" placeholder="Escribe el id del jugador" required>
+			</div>
+			<div>
+				<label>Nombre del jugador</label>
+				<input type="text" name="nmJugador" id="nmJugador" placeholder="Escribe el nombre del jugador" required>
+			</div>
+			<div>
+				<label>Fecha de nacimiento del jugador</label>
+				<input type="date" name="fechaNacim" id="fechaNacim" placeholder="Escribe el fechaNacim de tu jugador" required>
+			</div>
+			<div>
+				<label>Numero del jugador</label>
+				<input type="text" name="numeroJug" id="numeroJug" placeholder="Escribe el numero del jugador" required>
+			</div>
+			<div>
+				<label>Equipo</label>
+				<input type="text" name="Equipo" id="Equipo" placeholder="Ingresa el id del Equipo" required>
+			</div>
+			<div>
+				<label>Torneo</label>
+				<input type="text" name="Torneo" id="Torneo" placeholder="Escribe el nombre del Torneo" required>
+			</div>
+			
+			<input class="actualizar" type="submit" name="sub" value="Actualizar jugador"/>
+            <input class="volver" type="button" value="volver atrás" name="volver atrás2"/>
+		</form>	
+	</div>
+	<script src="/jugadores/editarJugador.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form{
+    width: 400px;
+    background: #24303c;
+    padding: 60px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+}
+form h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+
+}
+form input[type=text]{
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+input[type=submit]{
+    background-color: red;
+    color: white;
+    padding: 8px 10px;
+    margin: 13px 13px;
+    cursor: pointer;
+    width: 40%;
+}
+input[type=button]{
+    background-color: #1C94C8;
+    color: white;
+    padding: 8px 10px;
+    margin: 13px 13px;
+    cursor: pointer;
+    width: 40%;
+}
+
+input[type=add]{
+    background-color: #2ecc71;
+    color: black;
+    text-align: center;
+    FONT-SIZE: 12pt;
+    padding: 8px 10px;
+    margin: 13px 13px;
+    cursor: pointer;
+    width: 20%;
+}
+input[type=edit]{
+    background-color: #f1c40f;
+    color: black;
+    text-align: center;
+    FONT-SIZE: 12pt;
+    padding: 8px 10px;
+    margin: 13px 13px;
+    cursor: pointer;
+    width: 20%;
+}
+input[type=del]{
+    background-color: #ec7063;
+    color: black;
+    text-align: center;
+    FONT-SIZE: 12pt;
+    padding: 8px 10px;
+    margin: 13px 13px;
+    cursor: pointer;
+    width: 20%;
+}
+

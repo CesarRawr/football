@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+	<title>Agregar Jugador</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/styles-jugadores.css"> 
+</head>
+<body>
+
+	<div>
+		<form  method="POST" name='agregarJugador'>
+			<center><h1>Agregar Jugador</h1></center>			
+			<input type="text" name="nmJugador" id="nmJugador" placeholder="Ingresa el nombre del Jugador" required>
+		
+			<input type="date" name="fechaNacim" id="fechaNacim" placeholder="Ingresa la fecha de Nacimiento" required>
+		
+			<input type="number_format" name="numeroJug" id="numeroJug" placeholder="Ingresa el numero del Jugador" required>		
+			
+			<input type="number_format" name="Equipo" id="Equipo" placeholder="Ingresa al equipo del Jugador" required>
+
+			<input type="number_format" name="Torneo" id="Torneo" placeholder="Ingresa el torneo del equipo" required>
+
+			<input class="agregar" type="submit" value="Agregar" name="submit"/>
+			<input class="volver" type="button" value="volver atrás" name="volver atrás2"/>
+		</form>		
+	</div>
+	<script src="/jugadores/agregarJugador.js"></script>
+</body>
+</html>

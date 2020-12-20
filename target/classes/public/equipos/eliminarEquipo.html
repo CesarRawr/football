@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<title>Eliminar Equipo</title>
+	<meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../css/styles-equipos.css"> 
+<body>
+	<div>
+		<form method="POST" name='eliminarEquipo'>
+            <center><h1>Eliminar Equipo</h1></center>
+			<div>
+				<label>ID del equipo</label>
+				<input type="text" name="nmEquipo" id="idEquipo" placeholder="Introduce el ID del equipo" required>
+			</div>
+			
+			<input class="eliminar" id= "btnDelete" type="submit" name="sub" value="Eliminar"/>
+            <input class="volver" type="button" value="volver atrás" name="volver atrás2"/>
+		</form>
+	</div>
+	<script src="/equipos/eliminarEquipo.js"></script>
+</body>
+</html>

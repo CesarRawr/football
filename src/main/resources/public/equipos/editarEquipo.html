@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<title>Actualizar Equipo</title>
+	<meta charset="utf-8">
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="../css/styles-equipos.css"> 
+<body>
+	<div>
+		<form  method="POST" name='actualizarEquipo'>
+            <center><h1>Actualizar Equipo</h1></center>
+			<div>
+				<label>Nombre del equipo</label>
+				<input type="text" name="nmEquipo" id="nmEquipo" placeholder="Escribe el nombre del equipo" required>
+			</div>
+			<div>
+				<label>Slogan del equipo:</label>
+				<input type="text" name="slogan" id="slogan" placeholder="Escribe el slogan de tu equipo" required>
+			</div>
+			<div>
+				<label>Director Tecnico del equipo:</label>
+				<input type="text" name="dt" id="dt" placeholder="Escribe el nombre del director tecnico del equipo" required>
+			</div>
+			<div>
+				<label>Torneo:</label>
+				<input type="text" name="torneo" id="torneo" placeholder="Ingresa el torneo" required>
+			</div>
+			<div>
+				<label>Id  del equipo</label>
+				<input type="number_format" name="idEquipo" id="idEquipo" placeholder="Escribe id del equipo" required>
+			</div>
+			
+			<input class="actualizar" type="submit" name="sub" value="Actualizar"/>
+            <input class="volver" type="button" value="volver atrás" name="volver atrás2"/>
+		</form>		
+
+	</div>
+	<script src="/equipos/editarEquipo.js"></script>
+</body>
+</html>

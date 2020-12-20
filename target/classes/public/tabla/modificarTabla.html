@@ -1,0 +1,68 @@
+<hmtl>
+    <head>
+        <title>Modificar Resultados</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+        <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     
+        <!-- Favicon-->
+        <link rel="icon" type="image/png" href="../images/favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../css/style-table.css"> 
+    </head>
+
+    <body >
+    
+        <form method="POST">
+            <center><h1>Actualizar resultados</h1></center>
+            <label for="tEnTorneo">Equipo a actualizar</label>
+            
+            <select type ="text" id="idPosicion" name="idPosicion">
+                <option value="1">Conejos</option> 
+                <option value="2">Borregas</option>
+                <option value="3">Aguilas</option> 
+                <option value="4">Pequeñines</option> 
+                <option value="5">Montejei</option> 
+              
+            </select>
+                    <br>
+            <label for="tEnTorneo">Elije solo un resultado</label><br>
+            <input type="radio" id="jg" name="jg" value="3">Ganado<br>
+            <input type="radio" id="je" name="je" value="1">Empatado<br>
+            <input type="radio" id="jp" name="jp" value="0">Perdido<br>
+            
+            
+            <label for="tEnTorneo">Goles a favor</label>
+            <input type ="number_format" id="gf" name="gf">
+            <br>
+            <label for="tEnTorneo">Goles en contra</label>
+            <input type ="number_format" id="gc" name="gc">
+            <br>
+            <button type="submit">Aceptar</button>
+            <input type="button" value="Volver atrás" name="volver atrás2" onclick="location.href='/Pagina Futbol/posiciones/tabla.html'" />
+            
+        </form>
+    </body>
+</hmtl>
