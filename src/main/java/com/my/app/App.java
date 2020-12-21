@@ -24,7 +24,7 @@ public class App {
             String pass = req.queryParams("pass");
             if(user.equals("javier") && pass.equals("8462")) {
                 res.status(200);
-                res.redirect("admin.html");
+                res.redirect("https://fball2.herokuapp.com/admin.html");
             }else {
                 System.out.println("Permiso denegado");
                 res.status(404);
