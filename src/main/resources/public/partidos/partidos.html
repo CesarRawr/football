@@ -50,34 +50,24 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>ID</th>
                     <th>LOCAL</th>
-                    <th> </th>
                     <th>VISITANTE</th>
                     <th>FECHA</th>
                     <th>HORA</th>
                 </tr>
             </thead>
-
-            <tbody>
-
-                            <tr>
-                            <td>1</td>
-                            <td>VS</td>
-                            <td>2</td>
-                            <td>mañana</td>
-                            <td>15:30</td>
-                        </tr>
-            </tbody>
-
+            <tbody class="table-container"></tbody>
         </table> 
     </div>
 </header>
     <center>
         <div >
-            <input type="add" value="Agregar nuevo partido" name="sub" onclick="location.href='../partidos/agregarPartido.html'" />
-            <input type="edit" value="Editar partido" name="volver atrás2" onclick="location.href='../partidos/editarPartido.html'" />
-            <input type="del" value="Eliminar partido" name="volver atrás2" onclick="location.href='../partidos/eliminarPartido.html'" />
+            <input type="add" value="Agregar nuevo partido" name="sub" onclick="location.href='/partidos/agregarPartido.html'" />
+            <input type="edit" value="Editar partido" name="volver atrás2" onclick="location.href='/partidos/editarPartido.html'" />
+            <input type="del" value="Eliminar partido" name="volver atrás2" onclick="location.href='/partidos/eliminarPartido.html'" />
          </div>
     </center>
+    <script src="/partidos/partidos.js"></script>
 </body>
 </html>

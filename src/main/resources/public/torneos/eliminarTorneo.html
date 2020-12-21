@@ -13,16 +13,16 @@
 		<form method="POST" name='eliminarTorneo'>
         <center><h1>Eliminar Torneo</h1></center>
 			<div>
-				<label>Nombre del Torneo</label>
-				<input type="text" name="nmTorneo" id="nmTorneo" placeholder="Escribe el nombre del torneo" required>
+				<label>ID del Torneo</label>
+				<input type="text" name="idTorneo" id="idTorneo" placeholder="Escribe el id del torneo" required>
 			</div>
 			
 			
-			<input type="submit" name="sub" value="Eliminar"/>
-            <input type="button" value="volver atrás" name="volver atrás2" onclick="location.href='/oficio/torneos/consultar.php'" />
+			<input class="eliminar" type="submit" name="sub" value="Eliminar"/>
+            <input class="volver" type="button" value="volver atrás" name="volver atrás2"/>
 		</form>		
 
 	</div>
-
+	<script src="/torneos/eliminarTorneo.js"></script>
 </body>
 </html>

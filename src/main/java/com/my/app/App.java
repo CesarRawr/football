@@ -107,6 +107,58 @@ public class App {
 
             return DAONOTICIAS.actualizarNoticia(noticia);
         });
+
+        //                         Partidos
+        //---------------------------------------------------------------
+
+        get("/partido", (req, res) -> {
+            return gson.toJson(DAOPARTIDOS.getPartidos());
+        });
+
+        post("/partido", (req, res) -> {
+
+            String data = req.body();
+            Partido partido = gson.fromJson(data, Partido.class);
+
+            return DAOPARTIDOS.crearPartido(partido);
+        });
+        
+        delete("/partido/:id", (req, res) -> {
+            return DAOPARTIDOS.eliminarPartido(req.params("id"));
+        });
+
+        put("/partido", (req, res) -> {
+            String data = req.body();
+            Partido partido = gson.fromJson(data, Partido.class);
+
+            return DAOPARTIDOS.actualizarPartido(partido);
+        });
+
+        //                      Torneos
+        //-----------------------------------------------------------
+        
+        get("/torneo", (req, res) -> {
+            return gson.toJson(DAOTORNEOS.getTorneos());
+        });
+
+        post("/torneo", (req, res) -> {
+
+            String data = req.body();
+            Torneo torneo = gson.fromJson(data, Torneo.class);
+
+            return DAOTORNEOS.crearTorneo(torneo);
+        });
+        
+        delete("/torneo/:id", (req, res) -> {
+            return DAOTORNEOS.eliminarTorneo(req.params("id"));
+        });
+
+        put("/torneo", (req, res) -> {
+            String data = req.body();
+            Torneo torneo = gson.fromJson(data, Torneo.class);
+
+            return DAOTORNEOS.actualizarTorneo(torneo);
+        });
     }
 
     static int getHerokuAssignedPort() {
